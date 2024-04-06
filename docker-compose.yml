@@ -1,0 +1,11 @@
+name: plaincommerce
+
+services: 
+  web:
+    image: php:8.2-apache
+    user: ${UID:-1000}
+    volumes:
+      - ./src:/var/www/html:ro
+      - ./data/orders:/opt/data/orders:rw
+    ports:
+      - ${PORT:-80}:80
