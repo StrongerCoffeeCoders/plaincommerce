@@ -1,13 +1,6 @@
 <?php
-if (isset($_POST['buy'])) {
-    $nextOrderNumber = (new GlobIterator('/opt/data/orders/*.json'))->count() + 1;
-    file_put_contents(
-      '/opt/data/orders/' . $nextOrderNumber . '.json',
-      json_encode($_POST)
-    );
 
-    header('Location: /?order_success=' . $nextOrderNumber);
-}
+require_once 'products.formHandler.php';
 
 $productId = 2;
 $productTitle = 'bar';
@@ -42,7 +35,4 @@ $productImgSrc = 'data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgA
     0k30INVU4I07c8nJTC6ZBDl1/CQeN5Irn9aL9VBtLAphaNwJDP7zAJIUaQMTjFoLILBWiBIdOuLQ
     caftMg3or2jwdd88LsSTPoGHq10=';
 
-
 include_once 'products.template.php';
-?>
-
