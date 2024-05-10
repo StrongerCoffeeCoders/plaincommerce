@@ -16,9 +16,10 @@ if (isset($_POST['buy'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product Foo</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css"/>
 </head>
 <body>
-    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;row-gap:1rem;">
+    <div class="center-content">
         <h1>Foo</h1>
         <img src="data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABw
     aWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAEOAAEA
@@ -40,7 +41,7 @@ if (isset($_POST['buy'])) {
     Fv5hqLhK0BM2V/kZ796WiTAQmimx2DLwJEK65MMDlDLpzROxZjjvNKQ3oDLA4LW9XLIy0J/HRIBg
     VYZVIILezdTlM7HkGG0M3d0IbJ7lsr6rCh29kO67rYnon96v4T9P9gRTEIHFvkhVYhjiAE9HSPA5
     9kTk">
-        <div style="max-width:30vw;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget facilisis nibh. Donec posuere purus quis nibh suscipit, nec tempor arcu vehicula. Vestibulum rutrum auctor nisl in ultricies. Morbi eu imperdiet sapien. Donec sollicitudin turpis vel ultrices imperdiet. Duis eget elementum tortor. Suspendisse pharetra arcu nulla, sed cursus dui vulputate sed.</div>
+        <div class="max-30vw">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget facilisis nibh. Donec posuere purus quis nibh suscipit, nec tempor arcu vehicula. Vestibulum rutrum auctor nisl in ultricies. Morbi eu imperdiet sapien. Donec sollicitudin turpis vel ultrices imperdiet. Duis eget elementum tortor. Suspendisse pharetra arcu nulla, sed cursus dui vulputate sed.</div>
         <div>Price: $100.00</div>
 
         <div>
