@@ -8,20 +8,12 @@ if (isset($_POST['buy'])) {
 
     header('Location: /?order_success=' . $nextOrderNumber);
 }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product bar</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css"/>
-</head>
-<body>
-    <div class="center-content">
-        <h1>bar</h1>
-        <img src="data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABw
+$productId = 2;
+$productTitle = 'bar';
+$productPrice = 200.00;
+$productDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget facilisis nibh. Donec posuere purus quis nibh suscipit, nec tempor arcu vehicula. Vestibulum rutrum auctor nisl in ultricies. Morbi eu imperdiet sapien. Donec sollicitudin turpis vel ultrices imperdiet. Duis eget elementum tortor. Suspendisse pharetra arcu nulla, sed cursus dui vulputate sed.';
+$productImgSrc = 'data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABw
     aWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAEOAAEA
     AAAAAAAFCQAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAamlwcnAAAABLaXBj
     bwAAABNjb2xybmNseAACAAIABoAAAAAMYXYxQ4EADAAAAAAUaXNwZQAAAAAAAADwAAAAoAAAABBw
@@ -48,20 +40,9 @@ if (isset($_POST['buy'])) {
     Y5T7hYWF1I68LDXb20XBACWisb6URh/aLwzeXM3x7lUoS3igYl9hJvZRDA0D/Q0IBjCLqYGrAZC3
     /c/FY3p30hPeWwO8MEGJjLK2X4OT320zEBzgLLwTVezyu5yO2UMqwIYRaixmjssEXIDzE7y3ycp7
     0k30INVU4I07c8nJTC6ZBDl1/CQeN5Irn9aL9VBtLAphaNwJDP7zAJIUaQMTjFoLILBWiBIdOuLQ
-    caftMg3or2jwdd88LsSTPoGHq10=">
+    caftMg3or2jwdd88LsSTPoGHq10=';
 
-        <div class="max-30vw">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget facilisis nibh. Donec posuere purus quis nibh suscipit, nec tempor arcu vehicula. Vestibulum rutrum auctor nisl in ultricies. Morbi eu imperdiet sapien. Donec sollicitudin turpis vel ultrices imperdiet. Duis eget elementum tortor. Suspendisse pharetra arcu nulla, sed cursus dui vulputate sed.</div>
-        <div>Price: $200.00</div>
 
-        <div>
-            <form method="post">
-                <input name="quantity" type="number" value="1"/>
-                <input name="price" type="hidden" value="200.00"/>
-                <input name="product_id" type="hidden" value="2"/>
-                <button name="buy">Buy</button>
-            </form>
-        </div>
+include_once 'products.template.php';
+?>
 
-    </div>
-</body>
-</html>

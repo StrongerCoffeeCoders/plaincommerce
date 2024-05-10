@@ -8,20 +8,12 @@ if (isset($_POST['buy'])) {
 
     header('Location: /?order_success=' . $nextOrderNumber);
 }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product Foo</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css"/>
-</head>
-<body>
-    <div class="center-content">
-        <h1>Foo</h1>
-        <img src="data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABw
+$productId = 1;
+$productTitle = 'foo';
+$productPrice = 100.00;
+$productDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget facilisis nibh. Donec posuere purus quis nibh suscipit, nec tempor arcu vehicula. Vestibulum rutrum auctor nisl in ultricies. Morbi eu imperdiet sapien. Donec sollicitudin turpis vel ultrices imperdiet. Duis eget elementum tortor. Suspendisse pharetra arcu nulla, sed cursus dui vulputate sed.';
+$productImgSrc = 'data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABw
     aWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAEOAAEA
     AAAAAAADMAAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAamlwcnAAAABLaXBj
     bwAAABNjb2xybmNseAACAAIABoAAAAAMYXYxQ4EADAAAAAAUaXNwZQAAAAAAAADwAAAA2wAAABBw
@@ -40,19 +32,8 @@ if (isset($_POST['buy'])) {
     WHJVd5B4EfpM6a5riL/cTUe+3OvZexCwAvb5IC4xZxbu75U6IgWSy1vHN7BRouETj/db5E+qiGGK
     Fv5hqLhK0BM2V/kZ796WiTAQmimx2DLwJEK65MMDlDLpzROxZjjvNKQ3oDLA4LW9XLIy0J/HRIBg
     VYZVIILezdTlM7HkGG0M3d0IbJ7lsr6rCh29kO67rYnon96v4T9P9gRTEIHFvkhVYhjiAE9HSPA5
-    9kTk">
-        <div class="max-30vw">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget facilisis nibh. Donec posuere purus quis nibh suscipit, nec tempor arcu vehicula. Vestibulum rutrum auctor nisl in ultricies. Morbi eu imperdiet sapien. Donec sollicitudin turpis vel ultrices imperdiet. Duis eget elementum tortor. Suspendisse pharetra arcu nulla, sed cursus dui vulputate sed.</div>
-        <div>Price: $100.00</div>
+    9kTk';
 
-        <div>
-            <form method="post">
-                <input name="quantity" type="number" value="1"/>
-                <input name="price" type="hidden" value="100.00"/>
-                <input name="product_id" type="hidden" value="1"/>
-                <button name="buy">Buy</button>
-            </form>
-        </div>
+require_once 'products.template.php';
+?>
 
-    </div>
-</body>
-</html>

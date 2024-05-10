@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plain Commerce</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+
 <?php
 if ($orderId = $_GET['order_success'] ?? null) {
 ?>
@@ -12,18 +22,8 @@ if ($orderId = $_GET['order_success'] ?? null) {
      </div>
 <?php
     exit();
-}
+} else {
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Plain Commerce</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-</head>
-<body>
     <div class="center-content">
         <h1>Plain Commerce</h1>
         Buy our products:
@@ -32,5 +32,9 @@ if ($orderId = $_GET['order_success'] ?? null) {
         <br>
         <a href="./products/2.php">Bar</a>
     </div>
+<?php
+}
+?>
+
 </body>
 </html>
